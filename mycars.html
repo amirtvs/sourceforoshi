@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3d9b278660.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="splashscreen">
+        <div class="splashscreen-content">
+            <div class="splashscreen-rento-logo">
+                <p class="rento">RENTO</p>
+                <small>easily rent cars near you.</small>
+                <div style="margin-top: 10px;"><i class="fa fa-sync fa-spin"></i></div>
+                <div class="loading-percentage">
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <a href="#" class="nav-toggle"><i class="fa fa-bars"></i></a>
+        <ul class="main-menu">
+            <a href="#" class="nav-collapse"><i class="fa fa-times"></i></a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Edit Profile</a></li>
+            <li><a href="mycars.html">My Cars</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div>
+            <a href="#" class="action-link" id="addCar"><i class="fa fa-plus"></i>Add Car</a>
+            <ul id="myCars" class="cars-list">
+
+            </ul>
+        </div>
+    </div>
+    <div class="modal-bg">
+        <div class="modal-content">
+            <a href="#" class="modal-close"><i class="fa fa-times"></i></a>
+            <div class="form">
+                <div class="form-item">
+                    <label for="carBrand">Brand:</label>
+                    <select id="carBrand">
+                        <option value="">Select</option>
+                        <option value="bmw">BMW</option>
+                        <option value="mercedes">Mercedes Benz</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="carName">Name:</label>
+                    <input type="text" id="carName">
+                </div>
+                <div class="form-item">
+                    <label for="carModel">Model:</label>
+                    <input type="number" id="carModel">
+                </div>
+                <div class="form-item">
+                    <label for="dailyPrice">Daily Price:</label>
+                    <input type="number" id="dailyPrice">
+                </div>
+                <div class="form-item form-item-btn">
+                    <input type="button" value="Add Car" id="btnAddCar">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+    <script type="text/javascript" src="../uber/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app-firebase.js"></script>
+</body>
+</html>
